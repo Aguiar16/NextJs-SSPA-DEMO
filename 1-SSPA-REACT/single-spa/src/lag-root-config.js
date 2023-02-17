@@ -9,17 +9,18 @@ registerApplication({
   activeWhen: ["/"],
 });
 
-// registerApplication({
-//   name: "@lag/react-single",
-//   app: () =>
-//     System.import("@lag/react-single"),
-//   activeWhen: ["/react-single"],
-// });
-// registerApplication({
-//   name: "@lag/navbar",
-//   app: () => System.import("@lag/navbar"),
-//   activeWhen: ["/"]
-// });
+registerApplication({
+  name: "@lag/react-single",
+  app: () =>
+    System.import("@lag/react-single"),
+  activeWhen: ["/react-single"],
+});
+
+registerApplication({
+  name: "@lag/navbar",
+  app: () => System.import("@lag/navbar"),
+  activeWhen: ()=>true
+});
 
 start({
   urlRerouteOnly: true,
